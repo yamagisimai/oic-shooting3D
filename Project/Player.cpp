@@ -40,7 +40,14 @@ void CPlayer::Initialize(void){
 void CPlayer::Update(void){
 	//回転方向
 	float Roll = 0;
+	float m_Speed = PLAYER_SPEED;
+
+
 	//キーボードでの移動
+	if (g_pInput->IsKeyHold(MOFKEY_LEFT))
+	{
+		m_Speed *= 100;
+	}
 	if (g_pInput->IsKeyHold(MOFKEY_LEFT))
 	{
 		m_Pos.x = max(m_Pos.x - PLAYER_SPEED, -FIELD_HALF_X);

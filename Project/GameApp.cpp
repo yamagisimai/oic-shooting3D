@@ -30,6 +30,7 @@ bool               gbDebug = false;
 MofBool CGameApp::Initialize(void){
 	//リソース配置ディレクトリの設定
 	CUtilities::SetCurrentDirectory("Resource");
+
 	//カメラ初期化
 	gCamera.SetViewPort();
 	gCamera.LookAt(Vector3(0, 6.0f, -17.0f), Vector3(0, 0, -10), Vector3(0, 1, 0));
